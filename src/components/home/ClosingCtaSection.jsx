@@ -4,28 +4,30 @@ import { imageManifest } from '../../data/imageManifest';
 
 export default function ClosingCtaSection({ onOpenInquiry }) {
   return (
-    <section className="py-20 sm:py-28 bg-[#F8F9F7] text-left relative overflow-hidden">
+    <section className="py-24 sm:py-36 bg-[#F5F0E7] text-left relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="card-thick p-8 sm:p-14 border border-[#D5DDE0] shadow-boutique-raised bg-[#FDFDFC] relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <div className="card-warm p-8 sm:p-14 lg:p-16 border border-[#E9E0D1] shadow-warm-raised bg-[#FBF9F5] relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
             
-            {/* Left Text (8 Cols) */}
-            <div className="md:col-span-8 space-y-4">
-              <span className="badge-tag">
+            {/* Left Copy (8 Cols) */}
+            <div className="md:col-span-8 space-y-5">
+              <span className="badge-tag-warm">
                 A Personal Invitation
               </span>
-              <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#25323D] tracking-tight leading-tight">
+
+              <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#24211D] font-normal tracking-tight leading-[1.08]">
                 “I’d love to be your best friend’s new best friend.”
               </h2>
-              <p className="text-sm sm:text-base text-[#56636C] max-w-lg">
-                Let’s talk about your upcoming travel, daily work schedule, or special pet needs in Senatobia, Hernando, and North Mississippi.
+
+              <p className="text-sm sm:text-base text-[#5C554E] max-w-lg leading-relaxed">
+                Tell Shalon about your pets, their routines, and your upcoming dates in Senatobia, Hernando, and North Mississippi.
               </p>
 
-              <div className="pt-3 flex flex-wrap items-center gap-4">
+              <div className="pt-2 flex flex-wrap items-center gap-4">
                 <button
                   onClick={() => onOpenInquiry()}
-                  className="btn-accent"
+                  className="btn-forest text-sm sm:text-base py-3.5 px-8 font-bold"
                 >
                   <span>Request Care With Shalon</span>
                   <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -33,30 +35,27 @@ export default function ClosingCtaSection({ onOpenInquiry }) {
                   </svg>
                 </button>
 
-                <a
-                  href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                  className="btn-secondary text-xs sm:text-sm"
-                >
-                  <span>Call {BUSINESS_INFO.phone}</span>
-                </a>
+                <div className="flex items-center gap-2 text-xs sm:text-sm text-[#5C554E]">
+                  <span>or call direct:</span>
+                  <a
+                    href={`tel:${BUSINESS_INFO.phoneRaw}`}
+                    className="font-bold text-[#243A31] hover:underline"
+                  >
+                    {BUSINESS_INFO.phone}
+                  </a>
+                </div>
               </div>
             </div>
 
-            {/* Right Mini Portrait (4 Cols) */}
-            <div className="md:col-span-4 flex flex-col items-center">
-              <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-[#EDF1F3] shadow-md">
+            {/* Right Window-Shaped Portrait (4 Cols) */}
+            <div className="md:col-span-4 flex justify-center">
+              <div className="w-40 h-52 sm:w-48 sm:h-64 window-motif overflow-hidden border-2 border-[#E9E0D1] shadow-md relative bg-[#F5F0E7]">
                 <img
                   src={imageManifest.ownerPortrait.src}
                   alt={BUSINESS_INFO.owner.name}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <span className="font-heading font-bold text-sm text-[#25323D] mt-3 block">
-                {BUSINESS_INFO.owner.name}
-              </span>
-              <span className="text-xs text-[#56636C] block">
-                Lead Caregiver • Senatobia, MS
-              </span>
             </div>
 
           </div>

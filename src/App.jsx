@@ -2,7 +2,8 @@
 import Lenis from 'lenis';
 import Navbar from './components/layout/Navbar';
 import Hero from './components/home/Hero';
-import VisualProofMarquee from './components/home/VisualProofMarquee';
+import AtHomeIntro from './components/home/AtHomeIntro';
+import LifePhotoJournal from './components/home/LifePhotoJournal';
 import SignatureServiceSelector from './components/home/SignatureServiceSelector';
 import EverydayCareSection from './components/home/EverydayCareSection';
 import OvernightExpectations from './components/home/OvernightExpectations';
@@ -140,54 +141,58 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F8F9F7] text-[#25323D] flex flex-col font-sans selection:bg-[#284E68]/15 selection:text-[#1E3E54]">
-      {/* Primary Navigation */}
+    <div className="min-h-screen bg-[#F5F0E7] text-[#24211D] flex flex-col font-sans selection:bg-[#243A31]/15 selection:text-[#1B2D26]">
+      
+      {/* 01: Sticky Navigation */}
       <Navbar
         onOpenInquiry={handleOpenInquiry}
         currentPage={currentPage}
         onNavigate={handleNavigate}
       />
 
-      {/* Main Page Flow ("At Home with Paws Up") */}
+      {/* Main Page Flow (Warm Southern Home Architecture) */}
       <main className="flex-grow">
-        {/* 01 & 02: Hero with Window-Light Photography & GSAP Stagger */}
+        {/* 02: Cinematic Hero with Big Background Image, Masked Reveal & Trust Strip */}
         <Hero onOpenInquiry={handleOpenInquiry} />
-        
-        {/* Dynamic Dual-Track Photo Marquee */}
-        <VisualProofMarquee onOpenInquiry={handleOpenInquiry} />
 
-        {/* 04: Signature Interactive Service Selector: "What kind of care do you need?" */}
+        {/* 03: At Home with Paws Up & Signature Window Motif */}
+        <AtHomeIntro onOpenInquiry={handleOpenInquiry} />
+
+        {/* 04: Life With Paws Up — Editorial Photo Journal */}
+        <LifePhotoJournal onOpenInquiry={handleOpenInquiry} />
+
+        {/* 05: Interactive Service Discovery & Visit Duration Selector (15/30/45/60 min) */}
         <SignatureServiceSelector onOpenInquiry={handleOpenInquiry} />
 
-        {/* 05: Everyday Care, Thoughtfully Explained */}
+        {/* 06: Everyday Care — Editorial Routine Storytelling (4 Alternating Sections) */}
         <EverydayCareSection onOpenInquiry={handleOpenInquiry} />
 
-        {/* 06: Overnight Expectations: Clarity as Part of the Design */}
+        {/* 07: Overnight Care — Night Mode Deep Forest Immersion */}
         <OvernightExpectations onOpenInquiry={handleOpenInquiry} />
 
-        {/* 03: Meet Shalon Parrott (30+ Years Experience, PSI Member) */}
+        {/* 08: Meet Shalon — Founder Story & Qualifications */}
         <MeetShalonSection onOpenInquiry={handleOpenInquiry} />
 
-        {/* 07: Genuine Client Reassurance */}
+        {/* 09: Client Stories — Single Large Testimonial Presentation */}
         <ReviewsSection onOpenInquiry={handleOpenInquiry} />
 
-        {/* 08: Service Area with Rural Inclusion & ZIP Check */}
+        {/* 10: Service Area — Simplified Regional Map Points & ZIP Code Checker */}
         <ServiceAreaSection onOpenInquiry={handleOpenInquiry} />
 
-        {/* 09: Booking Steps & Transparent Policy Summary */}
+        {/* 11: Booking Process (3 Steps) & Operating Policies Accordion */}
         <BookingPolicySection onOpenInquiry={handleOpenInquiry} />
 
-        {/* 10: Closing Personal Invitation */}
+        {/* 12: Final Personal Invitation & Window Portrait */}
         <ClosingCtaSection onOpenInquiry={handleOpenInquiry} />
       </main>
 
-      {/* Footer */}
+      {/* 13: Deep Forest Footer */}
       <Footer
         onOpenInquiry={handleOpenInquiry}
         onNavigate={handleNavigate}
       />
 
-      {/* 3-Step Care Request Modal */}
+      {/* 3-Step Care Consultation & Request Modal */}
       <InquiryModal
         isOpen={inquiryOpen}
         onClose={handleCloseInquiry}
@@ -196,20 +201,21 @@ export default function App() {
       />
 
       {/* Mobile Sticky Quick Action Bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-30 sm:hidden bg-[#F8F9F7]/95 backdrop-blur-md border-t border-[#D5DDE0] p-2.5 flex items-center gap-2 shadow-lg">
+      <div className="fixed bottom-0 left-0 right-0 z-30 sm:hidden bg-[#F5F0E7]/95 backdrop-blur-md border-t border-[#E9E0D1] p-2.5 flex items-center gap-2 shadow-lg">
         <a
           href={`tel:${BUSINESS_INFO.phoneRaw}`}
-          className="flex-1 py-3 px-3 rounded-full bg-[#EDF1F3] text-[#25323D] border border-[#D5DDE0] font-semibold text-xs flex items-center justify-center space-x-1.5 active:scale-95 transition"
+          className="flex-1 py-3 px-3 rounded-full bg-[#FBF9F5] text-[#24211D] border border-[#E9E0D1] font-bold text-xs flex items-center justify-center space-x-1.5 active:scale-95 transition"
         >
           <span>Call Shalon</span>
         </a>
         <button
           onClick={() => handleOpenInquiry()}
-          className="flex-1 py-3 px-3 rounded-full bg-[#284E68] hover:bg-[#1E3E54] text-white font-semibold text-xs flex items-center justify-center space-x-1.5 shadow-sm active:scale-95 transition"
+          className="flex-1 py-3 px-3 rounded-full bg-[#243A31] hover:bg-[#1B2D26] text-[#F5F0E7] font-bold text-xs flex items-center justify-center space-x-1.5 shadow-sm active:scale-95 transition"
         >
           <span>Request Care</span>
         </button>
       </div>
+
     </div>
   );
 }

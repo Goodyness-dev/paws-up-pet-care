@@ -8,39 +8,43 @@ export default {
   theme: {
     extend: {
       colors: {
-        surface: {
-          DEFAULT: '#F8F9F7',
-          soft: '#EDF1F3',
-          raised: '#FDFDFC',
+        ivory: {
+          DEFAULT: '#F5F0E7',
+          light: '#FBF9F5',
+          soft: '#E9E0D1',
         },
-        brand: {
-          text: '#25323D',
-          muted: '#56636C',
-          line: '#D5DDE0',
-          border: '#7A8790',
+        forest: {
+          DEFAULT: '#243A31',
+          dark: '#1B2D26',
+          light: '#2E4B40',
+          subtle: 'rgba(36, 58, 49, 0.08)',
         },
-        accent: {
-          DEFAULT: '#284E68',
-          hover: '#1E3E54',
-          light: '#E7EFF4',
-          subtle: 'rgba(40, 78, 104, 0.08)',
+        sage: {
+          DEFAULT: '#A9B5A0',
+          light: '#C5CFC0',
+        },
+        terracotta: {
+          DEFAULT: '#C87552',
+          hover: '#B36544',
+          subtle: 'rgba(200, 117, 82, 0.12)',
+        },
+        brown: {
+          text: '#24211D',
+          muted: '#5C554E',
         },
       },
       fontFamily: {
+        serif: ['"Fraunces"', 'Georgia', 'serif'],
         sans: ['"Manrope"', 'system-ui', '-apple-system', 'sans-serif'],
-        heading: ['"Manrope"', 'system-ui', '-apple-system', 'sans-serif'],
       },
       boxShadow: {
-        'boutique-card': '0 4px 20px -2px rgba(37, 50, 61, 0.05), 0 2px 6px -1px rgba(37, 50, 61, 0.03)',
-        'boutique-raised': '0 16px 40px -4px rgba(37, 50, 61, 0.10), 0 6px 16px -2px rgba(37, 50, 61, 0.05)',
-        'glow-accent': '0 0 35px -5px rgba(40, 78, 104, 0.40)',
+        'warm-card': '0 4px 20px -2px rgba(36, 33, 29, 0.06), 0 2px 6px -1px rgba(36, 33, 29, 0.03)',
+        'warm-raised': '0 20px 45px -8px rgba(36, 33, 29, 0.12), 0 6px 16px -2px rgba(36, 33, 29, 0.06)',
+        'forest-glow': '0 0 35px -5px rgba(36, 58, 49, 0.40)',
       },
       animation: {
         'marquee': 'marquee 35s linear infinite',
         'marquee-reverse': 'marquee-reverse 35s linear infinite',
-        'float-slow': 'float 6s ease-in-out infinite',
-        'float-delayed': 'float 7s ease-in-out 2s infinite',
-        'pulse-subtle': 'pulseGlow 3s ease-in-out infinite',
       },
       keyframes: {
         marquee: {
@@ -50,14 +54,6 @@ export default {
         'marquee-reverse': {
           '0%': { transform: 'translateX(-50%)' },
           '100%': { transform: 'translateX(0%)' },
-        },
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-8px)' },
-        },
-        pulseGlow: {
-          '0%, 100%': { opacity: '0.9', transform: 'scale(1)' },
-          '50%': { opacity: '1', transform: 'scale(1.02)' },
         },
       },
     },

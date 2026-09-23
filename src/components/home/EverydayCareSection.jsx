@@ -2,137 +2,117 @@
 import { imageManifest } from '../../data/imageManifest';
 
 export default function EverydayCareSection({ onOpenInquiry }) {
-  const careRoutines = [
+  const stories = [
     {
-      title: "Nutritional Schedules & Fresh Hydration",
-      desc: "Exact portioning, customized wet/dry mixes, and fresh filtered water served in their usual clean bowls at their regular meal times.",
-      tag: "Feeding Routines"
+      num: '01',
+      tag: '01 / FEEDING',
+      title: 'Nutritional schedules & fresh hydration.',
+      desc: 'Exact portions, familiar clean bowls, customized wet/dry mixes, and fresh filtered water served at their regular meal times—never rushed.',
+      image: '/images/home-cuddles.jpg',
+      alt: 'Clean, comfortable pet meal and rest routine'
     },
     {
-      title: "Medication & Gentle Medical Support",
-      desc: "Careful administration of oral tablets, topical ointments, eye drops, or supplements with gentle patience and zero stress.",
-      tag: "Health & Wellness"
+      num: '02',
+      tag: '02 / HEALTH & WELLNESS',
+      title: 'Medication without disrupting their day.',
+      desc: 'Careful, gentle administration of oral tablets, topical ointments, ear drops, or senior mobility supplements with patient respect and positive reinforcement.',
+      image: '/images/wedding-buster.jpg',
+      alt: 'Gentle attentive pet care'
     },
     {
-      title: "Unrushed Exercise & Backyard Safety",
-      desc: "Leashed neighborhood strolls or secure yard playtime tailored to your dog’s age, energy level, and weather conditions.",
-      tag: "Physical Activity"
+      num: '03',
+      tag: '03 / PHYSICAL ACTIVITY',
+      title: 'Unrushed exercise. Familiar routes.',
+      desc: 'Neighborhood leash strolls or backyard sniff sessions calibrated to your dog’s age, joint comfort, and energy level. Always secured on leash with hydration.',
+      image: '/images/routine-walk.jpg',
+      alt: 'Scenic outdoor walk in North Mississippi'
     },
     {
-      title: "Thoughtful Home Security & Mail Retrieval",
-      desc: "Packages brought inside, mail gathered, indoor house plants watered, and trash bins rolled out to maintain a lived-in appearance.",
-      tag: "Household Care"
+      num: '04',
+      tag: '04 / HOUSEHOLD CARE',
+      title: 'Your home still feels lived in while you’re away.',
+      desc: 'Packages and mail brought inside, houseplants watered, trash bins rolled to the curb, and interior light rotation to preserve complete household peace of mind.',
+      image: '/images/closing-roses.jpg',
+      alt: 'Careful household plant and mail management'
     }
   ];
 
   return (
-    <section className="py-20 sm:py-28 bg-[#F8F9F7]" id="routine">
+    <section className="py-24 sm:py-36 bg-[#F5F0E7] text-left relative overflow-hidden" id="routine">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-12 sm:mb-16 text-left">
-          <span className="badge-tag">
-            // Everyday Routine & Attentive Care
+        <div className="max-w-3xl mb-16 sm:mb-24 space-y-3">
+          <span className="badge-tag-warm">
+            Everyday Care
           </span>
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#25323D] tracking-tight mt-3">
-            Everyday care, thoughtfully explained.
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#24211D] font-normal tracking-tight leading-[1.05]">
+            The little things <br />
+            <span className="italic text-[#243A31]">aren’t little to them.</span>
           </h2>
-          <p className="text-base text-[#56636C] font-normal leading-relaxed mt-3">
-            Pets feel safest when their daily rhythm remains intact. Shalon coordinates each visit around the habits, comforts, and household routines your animals already know.
+          <p className="text-base text-[#5C554E] max-w-xl">
+            From the exact way they like their food dish positioned to their favorite evening scratch spot, Shalon respects the subtle routines that make your pets feel safe.
           </p>
         </div>
 
-        {/* 2-Column Editorial Grid: Photo Spread on Left, Routine Breakdown on Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          
-          {/* Photo Spread (6 Cols) */}
-          <div className="lg:col-span-6 grid grid-cols-2 gap-4">
-            <div className="rounded-2xl overflow-hidden border border-[#D5DDE0] shadow-boutique-card aspect-[4/5] relative group">
-              <img
-                src={imageManifest.everydayCare[0].src}
-                alt={imageManifest.everydayCare[0].title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-75" />
-              <div className="absolute bottom-3 left-3 right-3 text-white">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-[#E7EFF4] block">
-                  Home Comfort
-                </span>
-                <span className="font-heading font-semibold text-xs sm:text-sm text-white block">
-                  {imageManifest.everydayCare[0].title}
-                </span>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <div className="rounded-2xl overflow-hidden border border-[#D5DDE0] shadow-boutique-card aspect-[1/1] relative group">
-                <img
-                  src={imageManifest.everydayCare[1].src}
-                  alt={imageManifest.everydayCare[1].title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-75" />
-                <div className="absolute bottom-2.5 left-2.5 right-2.5 text-white">
-                  <span className="font-heading font-semibold text-xs text-white block">
-                    {imageManifest.everydayCare[1].title}
-                  </span>
-                </div>
-              </div>
-
-              <div className="rounded-2xl overflow-hidden border border-[#D5DDE0] shadow-boutique-card aspect-[1/1] relative group">
-                <img
-                  src={imageManifest.everydayCare[2].src}
-                  alt={imageManifest.everydayCare[2].title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-75" />
-                <div className="absolute bottom-2.5 left-2.5 right-2.5 text-white">
-                  <span className="font-heading font-semibold text-xs text-white block">
-                    {imageManifest.everydayCare[2].title}
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Routine Breakdown (6 Cols) */}
-          <div className="lg:col-span-6 space-y-4 text-left">
-            {careRoutines.map((routine, idx) => (
+        {/* 4 Large Alternating Story Sections */}
+        <div className="space-y-24 sm:space-y-32">
+          {stories.map((item, idx) => {
+            const isEven = idx % 2 === 1;
+            return (
               <div
-                key={idx}
-                className="card-thick-hover p-6 border border-[#D5DDE0] space-y-2"
+                key={item.num}
+                className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center"
               >
-                <div className="flex items-center justify-between">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#284E68]">
-                    {routine.tag}
-                  </span>
-                  <span className="text-xs font-mono text-[#56636C]">0{idx + 1}</span>
+                {/* Large Faint Background Number (0.07 opacity) */}
+                <div className={`absolute top-0 font-serif text-[120px] sm:text-[180px] font-bold text-[#24211D]/[0.06] select-none pointer-events-none -translate-y-12 sm:-translate-y-20 ${
+                  isEven ? 'right-4 lg:right-12' : 'left-4 lg:left-12'
+                }`}>
+                  {item.num}
                 </div>
-                <h3 className="font-heading font-bold text-lg text-[#25323D]">
-                  {routine.title}
-                </h3>
-                <p className="text-sm text-[#56636C] leading-relaxed">
-                  {routine.desc}
-                </p>
+
+                {/* Text Block (6 Cols) */}
+                <div className={`lg:col-span-6 space-y-4 relative z-10 ${
+                  isEven ? 'order-1 lg:order-2' : 'order-1 lg:order-1'
+                }`}>
+                  <span className="text-xs font-mono font-bold tracking-widest text-[#C87552] uppercase block">
+                    {item.tag}
+                  </span>
+                  <h3 className="font-serif text-3xl sm:text-4xl text-[#24211D] font-normal leading-tight">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm sm:text-base text-[#5C554E] leading-relaxed max-w-lg">
+                    {item.desc}
+                  </p>
+                  
+                  <div className="pt-2">
+                    <button
+                      onClick={() => onOpenInquiry()}
+                      className="text-xs font-bold text-[#243A31] hover:text-[#C87552] transition-colors flex items-center gap-1.5 group"
+                    >
+                      <span>Include in your care plan</span>
+                      <span className="transition-transform group-hover:translate-x-1">→</span>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Editorial Photo (6 Cols) */}
+                <div className={`lg:col-span-6 relative z-10 ${
+                  isEven ? 'order-2 lg:order-1' : 'order-2 lg:order-2'
+                }`}>
+                  <div className="rounded-2xl overflow-hidden border border-[#E9E0D1] shadow-warm-raised aspect-[4/3] bg-[#FBF9F5] group">
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
               </div>
-            ))}
-
-            <div className="pt-2">
-              <button
-                onClick={() => onOpenInquiry()}
-                className="btn-accent text-sm"
-              >
-                <span>Customize Your Pet's Routine</span>
-                <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-            </div>
-          </div>
-
+            );
+          })}
         </div>
 
       </div>
