@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 export default function OvernightExpectations({ onOpenInquiry }) {
   const inclusions = [
@@ -71,7 +71,7 @@ export default function OvernightExpectations({ onOpenInquiry }) {
             <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-2xl aspect-[4/3] group">
               <img
                 src="/images/service-overnight.jpg"
-                alt="Pets sleeping peacefully side by side at home"
+                alt="Black Labrador resting comfortably on the living room rug during overnight care"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />

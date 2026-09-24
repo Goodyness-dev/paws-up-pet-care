@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { imageManifest } from '../../data/imageManifest';
 
 export default function EverydayCareSection({ onOpenInquiry }) {
@@ -9,7 +9,7 @@ export default function EverydayCareSection({ onOpenInquiry }) {
       title: 'Nutritional schedules & fresh hydration.',
       desc: 'Exact portions, familiar clean bowls, customized wet/dry mixes, and fresh filtered water served at their regular meal times—never rushed.',
       image: '/images/home-cuddles.jpg',
-      alt: 'Clean, comfortable pet meal and rest routine'
+      alt: 'Attentive, gentle head and chin scratches in cozy living room'
     },
     {
       num: '02',
@@ -17,15 +17,15 @@ export default function EverydayCareSection({ onOpenInquiry }) {
       title: 'Medication without disrupting their day.',
       desc: 'Careful, gentle administration of oral tablets, topical ointments, ear drops, or senior mobility supplements with patient respect and positive reinforcement.',
       image: '/images/wedding-buster.jpg',
-      alt: 'Gentle attentive pet care'
+      alt: 'Patient, attentive pet care and medication support'
     },
     {
       num: '03',
       tag: '03 / PHYSICAL ACTIVITY',
       title: 'Unrushed exercise. Familiar routes.',
       desc: 'Neighborhood leash strolls or backyard sniff sessions calibrated to your dog’s age, joint comfort, and energy level. Always secured on leash with hydration.',
-      image: '/images/routine-walk.jpg',
-      alt: 'Scenic outdoor walk in North Mississippi'
+      image: '/images/service-visits.jpg',
+      alt: 'Happy dog enjoying outdoor exercise and play in yard'
     },
     {
       num: '04',
@@ -33,7 +33,7 @@ export default function EverydayCareSection({ onOpenInquiry }) {
       title: 'Your home still feels lived in while you’re away.',
       desc: 'Packages and mail brought inside, houseplants watered, trash bins rolled to the curb, and interior light rotation to preserve complete household peace of mind.',
       image: '/images/closing-roses.jpg',
-      alt: 'Careful household plant and mail management'
+      alt: 'Content cat and attentive household presence'
     }
   ];
 

@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -112,8 +112,8 @@ export default function AtHomeIntro({ onOpenInquiry }) {
               >
                 <img
                   ref={imgRef}
-                  src="/images/hero-paws-home.jpg"
-                  alt="Golden retriever resting comfortably in soft home window light"
+                  src="/images/routine-walk.jpg"
+                  alt="Silver Labrador resting comfortably on sofa with cozy blanket in a warm home"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />

@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { SERVICES_CATEGORIES } from '../../data/servicesData';
 import { imageManifest } from '../../data/imageManifest';
 
@@ -304,7 +304,7 @@ export default function SignatureServiceSelector({ onOpenInquiry }) {
                   <div className="rounded-2xl overflow-hidden border border-[#E9E0D1] aspect-[4/3] shadow-md">
                     <img
                       src="/images/service-custom.jpg"
-                      alt="Safe pet taxi and custom transit"
+                      alt="Exotic pet, reptile, and specialized species in-home care"
                       className="w-full h-full object-cover"
                     />
                   </div>

@@ -1,4 +1,4 @@
-﻿import React, { useRef } from 'react';
+import React, { useRef } from 'react';
 import { imageManifest } from '../../data/imageManifest';
 
 export default function LifePhotoJournal({ onOpenInquiry }) {
@@ -6,40 +6,52 @@ export default function LifePhotoJournal({ onOpenInquiry }) {
 
   const moments = [
     {
-      src: '/images/hero-paws-home.jpg',
-      title: 'Golden Hour Snuggles at Home',
+      src: '/images/hero-bg-cinematic.jpg',
+      title: 'Living Room Calm & Fireplace Routine',
       location: 'Hernando, MS',
       aspect: 'aspect-[3/4] w-72 sm:w-80',
     },
     {
       src: '/images/service-visits.jpg',
-      title: 'Scenic Trail Walk & Fresh Air',
-      location: 'Senatobia, MS',
-      aspect: 'aspect-[16/10] w-80 sm:w-96',
-    },
-    {
-      src: '/images/wedding-buster.jpg',
-      title: 'Buster’s Playtime & Treats',
-      location: 'Coldwater, MS',
-      aspect: 'aspect-[1/1] w-64 sm:w-72',
-    },
-    {
-      src: '/images/service-overnight.jpg',
-      title: 'Peaceful Overnight Sleep',
-      location: 'Tate County, MS',
-      aspect: 'aspect-[16/10] w-80 sm:w-96',
-    },
-    {
-      src: '/images/home-cuddles.jpg',
-      title: 'Morning Sofa Companion',
+      title: 'Backyard Running & Outdoor Playtime',
       location: 'Senatobia, MS',
       aspect: 'aspect-[3/4] w-72 sm:w-80',
     },
     {
-      src: '/images/routine-walk.jpg',
-      title: 'Sunset Decompression Routine',
+      src: '/images/home-cuddles.jpg',
+      title: 'Unrushed Affection & Gentle Chin Cuddles',
+      location: 'Senatobia, MS',
+      aspect: 'aspect-[3/4] w-72 sm:w-80',
+    },
+    {
+      src: '/images/service-overnight.jpg',
+      title: 'Peaceful Overnight Sleep on the Rug',
+      location: 'Tate County, MS',
+      aspect: 'aspect-[1/1] w-72 sm:w-80',
+    },
+    {
+      src: '/images/routine-senior.jpg',
+      title: 'Senior Smiles & Patient Care Pacing',
       location: 'Hernando, MS',
-      aspect: 'aspect-[16/11] w-80 sm:w-96',
+      aspect: 'aspect-[3/4] w-72 sm:w-80',
+    },
+    {
+      src: '/images/wedding-buster.jpg',
+      title: 'Cozy Bed & Attentive In-Home Rest',
+      location: 'Coldwater, MS',
+      aspect: 'aspect-[3/4] w-72 sm:w-80',
+    },
+    {
+      src: '/images/closing-roses.jpg',
+      title: 'Fluffy Feline Companionship at Home',
+      location: 'Senatobia, MS',
+      aspect: 'aspect-[3/4] w-72 sm:w-80',
+    },
+    {
+      src: '/images/service-custom.jpg',
+      title: 'Exotic Bearded Dragon & Habitat Care',
+      location: 'DeSoto County, MS',
+      aspect: 'aspect-[4/3] w-80 sm:w-96',
     }
   ];
 
